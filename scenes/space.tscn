@@ -2,13 +2,13 @@
 
 [ext_resource type="Script" path="res://scripts/space.gd" id="1_1vbxk"]
 [ext_resource type="Shader" path="res://shaders/move_bg.gdshader" id="2_uk8lv"]
-[ext_resource type="Texture2D" uid="uid://c2e5wwa21ce5h" path="res://assets/Background/background-game.jpg" id="3_1sgxd"]
+[ext_resource type="Texture2D" uid="uid://bf8s6nq5e7mp4" path="res://assets/Background/background-game.jpg" id="3_1sgxd"]
 [ext_resource type="Shader" path="res://shaders/fog.gdshader" id="4_44ok8"]
-[ext_resource type="Texture2D" uid="uid://bpyrcplbkwtmx" path="res://assets/Background/fog_background.png" id="5_v6twx"]
+[ext_resource type="Texture2D" uid="uid://brjaumcj88rfy" path="res://assets/Background/fog_background.png" id="5_v6twx"]
 [ext_resource type="PackedScene" uid="uid://ds23m4ungog48" path="res://prefabs/pause_menu.tscn" id="6_338t3"]
 [ext_resource type="PackedScene" uid="uid://bo7hk4648rlnu" path="res://scenes/Asteroid.tscn" id="7_1xjw3"]
 [ext_resource type="Script" path="res://scripts/nave.gd" id="8_mteom"]
-[ext_resource type="Texture2D" uid="uid://chh1svybeu0ud" path="res://assets/nave.png" id="9_oy2ik"]
+[ext_resource type="Texture2D" uid="uid://bnyebacix6hj2" path="res://assets/nave.png" id="9_oy2ik"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8jlme"]
 shader = ExtResource("2_uk8lv")
@@ -106,7 +106,7 @@ shape = SubResource("RectangleShape2D_jvfqx")
 
 [node name="Node2D" type="Node2D" parent="."]
 visible = false
-position = Vector2(98, 72)
+position = Vector2(137, 364)
 
 [node name="Asteroid" parent="Node2D" instance=ExtResource("7_1xjw3")]
 visible = false
