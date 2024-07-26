@@ -1,3 +1,4 @@
+
 [gd_scene load_steps=17 format=3 uid="uid://odqcfq1oyax2"]
 
 [ext_resource type="Script" path="res://scripts/space.gd" id="1_1vbxk"]
@@ -9,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bl7wdxxgtsd73" path="res://scenes/Asteroid.tscn" id="7_1xjw3"]
 [ext_resource type="Script" path="res://scripts/nave.gd" id="8_mteom"]
 [ext_resource type="Texture2D" uid="uid://bnyebacix6hj2" path="res://assets/nave.png" id="9_oy2ik"]
+[ext_resource type="Script" path="res://scripts/hud_manager.gd" id="10_66gv5"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8jlme"]
 shader = ExtResource("2_uk8lv")
@@ -70,29 +72,33 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("5_v6twx")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="ParedeBaixo" type="StaticBody2D" parent="."]
 position = Vector2(600, 667)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeBaixo"]
+visible = false
 shape = SubResource("RectangleShape2D_27gqx")
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+[node name="ParedeCima" type="StaticBody2D" parent="."]
 position = Vector2(599, 12)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeCima"]
+visible = false
 position = Vector2(-6, -1)
 shape = SubResource("RectangleShape2D_c4t2l")
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+[node name="ParedeEsquerda" type="StaticBody2D" parent="."]
 position = Vector2(1, 364)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeEsquerda"]
+visible = false
 shape = SubResource("RectangleShape2D_rjoxg")
 
-[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+[node name="ParedeDireita" type="StaticBody2D" parent="."]
 position = Vector2(1201, 338)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeDireita"]
+visible = false
 position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_jvfqx")
 
@@ -133,3 +139,74 @@ anchors_preset = 10
 anchor_right = 1.0
 grow_horizontal = 2
 pivot_offset = Vector2(449, 281)
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="control" type="Control" parent="HUD"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("10_66gv5")
+
+[node name="container" type="MarginContainer" parent="HUD/control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 40
+
+[node name="score_container" type="HBoxContainer" parent="HUD/control/container"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="score_label" type="Label" parent="HUD/control/container/score_container"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.921569, 0.764706, 1)
+theme_override_colors/font_outline_color = Color(0.992157, 0.34902, 0.129412, 1)
+theme_override_constants/outline_size = 19
+theme_override_constants/line_spacing = 141
+theme_override_font_sizes/font_size = 30
+text = "Score: "
+
+[node name="score_counter" type="Label" parent="HUD/control/container/score_container"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.921569, 0.764706, 1)
+theme_override_colors/font_outline_color = Color(0.992157, 0.34902, 0.129412, 1)
+theme_override_constants/outline_size = 19
+theme_override_constants/line_spacing = 141
+theme_override_font_sizes/font_size = 30
+text = "0000"
+
+[node name="timer_counter" type="HBoxContainer" parent="HUD/control/container"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="timer_label" type="Label" parent="HUD/control/container/timer_counter"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.921569, 0.764706, 1)
+theme_override_colors/font_outline_color = Color(0.992157, 0.34902, 0.129412, 1)
+theme_override_constants/outline_size = 19
+theme_override_constants/line_spacing = 141
+theme_override_font_sizes/font_size = 30
+text = "Tempo:"
+
+[node name="timer_counter" type="Label" parent="HUD/control/container/timer_counter"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.921569, 0.764706, 1)
+theme_override_colors/font_outline_color = Color(0.992157, 0.34902, 0.129412, 1)
+theme_override_constants/outline_size = 19
+theme_override_constants/line_spacing = 141
+theme_override_font_sizes/font_size = 30
+text = "00:00"
+
+[node name="clock_timer" type="Timer" parent="HUD/control"]
+
+[connection signal="timeout" from="HUD/control/clock_timer" to="HUD/control" method="_on_clock_timer_timeout"]
