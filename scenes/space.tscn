@@ -1,0 +1,143 @@
+[gd_scene load_steps=17 format=3 uid="uid://b4n5u3lrpw7s"]
+
+[ext_resource type="Script" path="res://scripts/space.gd" id="1_1vbxk"]
+[ext_resource type="Shader" path="res://shaders/move_bg.gdshader" id="2_uk8lv"]
+[ext_resource type="Texture2D" uid="uid://c2e5wwa21ce5h" path="res://assets/Background/background-game.jpg" id="3_1sgxd"]
+[ext_resource type="Shader" path="res://shaders/fog.gdshader" id="4_44ok8"]
+[ext_resource type="Texture2D" uid="uid://bpyrcplbkwtmx" path="res://assets/Background/fog_background.png" id="5_v6twx"]
+[ext_resource type="PackedScene" uid="uid://ds23m4ungog48" path="res://prefabs/pause_menu.tscn" id="6_338t3"]
+[ext_resource type="PackedScene" uid="uid://bo7hk4648rlnu" path="res://scenes/Asteroid.tscn" id="7_1xjw3"]
+[ext_resource type="Script" path="res://scripts/nave.gd" id="8_mteom"]
+[ext_resource type="Texture2D" uid="uid://chh1svybeu0ud" path="res://assets/nave.png" id="9_oy2ik"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8jlme"]
+shader = ExtResource("2_uk8lv")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3yn0o"]
+shader = ExtResource("4_44ok8")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_27gqx"]
+size = Vector2(1208, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c4t2l"]
+size = Vector2(1219, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rjoxg"]
+size = Vector2(20, 743)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jvfqx"]
+size = Vector2(20, 688)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eau0j"]
+radius = 19.0
+
+[node name="Space" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1vbxk")
+
+[node name="background" type="TextureRect" parent="."]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_8jlme")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -680.0
+offset_top = -462.5
+offset_right = 680.0
+offset_bottom = 462.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_1sgxd")
+
+[node name="fog" type="TextureRect" parent="."]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_3yn0o")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -900.0
+offset_top = -846.0
+offset_right = 900.0
+offset_bottom = 846.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_v6twx")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(600, 667)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
+shape = SubResource("RectangleShape2D_27gqx")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(599, 12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+visible = false
+position = Vector2(-6, -1)
+shape = SubResource("RectangleShape2D_c4t2l")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(1, 364)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+visible = false
+shape = SubResource("RectangleShape2D_rjoxg")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+position = Vector2(1201, 338)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+visible = false
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_jvfqx")
+
+[node name="pause_menu" parent="." instance=ExtResource("6_338t3")]
+
+[node name="SpawnTimer" type="Timer" parent="."]
+
+[node name="Node2D" type="Node2D" parent="."]
+visible = false
+position = Vector2(98, 72)
+
+[node name="Asteroid" parent="Node2D" instance=ExtResource("7_1xjw3")]
+visible = false
+position = Vector2(0, 0)
+
+[node name="RigidBody2D" type="RigidBody2D" parent="Node2D/Asteroid"]
+visible = false
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/Asteroid/RigidBody2D"]
+visible = false
+scale = Vector2(3.94737, 3.94737)
+shape = SubResource("CircleShape2D_eau0j")
+
+[node name="nave" type="CharacterBody2D" parent="."]
+texture_filter = 1
+position = Vector2(600, 564)
+script = ExtResource("8_mteom")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="nave"]
+position = Vector2(-30.8316, -27.45)
+scale = Vector2(0.609623, 0.609623)
+polygon = PackedVector2Array(-5, -63, 4, -63, 29, -17, 72, 24, 72, 52, 63, 53, 30.8906, 30.2646, 22.6888, 31.905, 22.6888, 41.7471, 30.8906, 43.3875, 39.0923, 51.5893, 42.3731, 81.1157, 19.4081, 81.1157, 19.4081, 66.3525, -19.9605, 66.3525, -19.9605, 81.1157, -44.5659, 81.1157, -42.9255, 63.0717, -31.443, 43.3875, -23.2412, 43.3875, -23.2412, 31.905, -33, 33, -63, 53, -73, 54, -72, 24, -24, -20, -23, -34)
+
+[node name="Nave" type="Sprite2D" parent="nave"]
+position = Vector2(-31, -24)
+scale = Vector2(0.225989, 0.225988)
+texture = ExtResource("9_oy2ik")
+
+[node name="player_pos" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+pivot_offset = Vector2(449, 281)
