@@ -27,6 +27,7 @@ shader = ExtResource("4_wg5yt")
 radius = 19.0
 
 [node name="Space" type="Node2D"]
+position = Vector2(2, 0)
 script = ExtResource("1_qmn13")
 
 [node name="nave" type="CharacterBody2D" parent="."]
@@ -44,32 +45,32 @@ position = Vector2(-31, -24)
 scale = Vector2(0.225989, 0.225988)
 texture = ExtResource("1_4rhmt")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="ParedeBaixo" type="StaticBody2D" parent="."]
 position = Vector2(600, 667)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeBaixo"]
 visible = false
 shape = SubResource("RectangleShape2D_27gqx")
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+[node name="ParedeCima" type="StaticBody2D" parent="."]
 position = Vector2(599, 12)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeCima"]
 visible = false
 position = Vector2(-6, -1)
 shape = SubResource("RectangleShape2D_c4t2l")
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+[node name="ParedeEsquerda" type="StaticBody2D" parent="."]
 position = Vector2(1, 364)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeEsquerda"]
 visible = false
 shape = SubResource("RectangleShape2D_rjoxg")
 
-[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+[node name="ParedeDireita" type="StaticBody2D" parent="."]
 position = Vector2(1201, 338)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeDireita"]
 visible = false
 position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_jvfqx")
