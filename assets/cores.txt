@@ -1,0 +1,5 @@
+roxo escuro = 0D0116
+azul = 2D0D84
+rosa = A4039E
+laranja = FD5921
+branco = FFEBC3
