@@ -1,8 +1,18 @@
-[gd_scene load_steps=8 format=3 uid="uid://gul6v8d1mev5"]
+[gd_scene load_steps=14 format=3 uid="uid://gul6v8d1mev5"]
 
-[ext_resource type="Texture2D" uid="uid://d2qnw2iv4gp0f" path="res://assets/game_over.png" id="1_rl5sa"]
-[ext_resource type="Script" path="res://scripts/game_over.gd" id="1_sxty8"]
-[ext_resource type="Theme" uid="uid://63yiam3bsfd8" path="res://theme/btn_title_screen.tres" id="2_ff2v4"]
+[ext_resource type="Script" path="res://scripts/game_over.gd" id="1_42ok0"]
+[ext_resource type="Shader" path="res://shaders/move_bg.gdshader" id="2_pddsa"]
+[ext_resource type="Texture2D" uid="uid://bf8s6nq5e7mp4" path="res://assets/Background/background-game.jpg" id="3_xbc5i"]
+[ext_resource type="Shader" path="res://shaders/fog.gdshader" id="4_7nbuf"]
+[ext_resource type="Texture2D" uid="uid://brjaumcj88rfy" path="res://assets/Background/fog_background.png" id="5_nd2hr"]
+[ext_resource type="Texture2D" uid="uid://df0bglckgau1d" path="res://assets/game_over.png" id="6_frdtc"]
+[ext_resource type="Theme" uid="uid://b6u42r1xi417o" path="res://theme/btn_title_screen.tres" id="7_6sj4m"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qs2i2"]
+shader = ExtResource("2_pddsa")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hd3js"]
+shader = ExtResource("4_7nbuf")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rqa0a"]
 
@@ -73,7 +83,23 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_sxty8")
+script = ExtResource("1_42ok0")
+
+[node name="background" type="TextureRect" parent="."]
+visible = false
+texture_repeat = 2
+material = SubResource("ShaderMaterial_qs2i2")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -680.0
+offset_top = -462.5
+offset_right = 680.0
+offset_bottom = 462.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_xbc5i")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -83,6 +109,21 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.0509804, 0.00392157, 0.0862745, 1)
+
+[node name="fog" type="TextureRect" parent="."]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_hd3js")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -900.0
+offset_top = -846.0
+offset_right = 900.0
+offset_bottom = 846.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_nd2hr")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -101,7 +142,7 @@ scale = Vector2(0.80916, 0.80916)
 
 [node name="gameOver_title" type="TextureRect" parent="VBoxContainer"]
 layout_mode = 2
-texture = ExtResource("1_rl5sa")
+texture = ExtResource("6_frdtc")
 
 [node name="HSeparator3" type="HSeparator" parent="VBoxContainer"]
 layout_mode = 2
@@ -117,7 +158,7 @@ theme_override_styles/separator = SubResource("StyleBoxEmpty_rqa0a")
 
 [node name="restart_btn" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("2_ff2v4")
+theme = ExtResource("7_6sj4m")
 text = "RESTART"
 
 [node name="HSeparator6" type="HSeparator" parent="VBoxContainer"]
@@ -126,7 +167,7 @@ theme_override_styles/separator = SubResource("StyleBoxEmpty_rqa0a")
 
 [node name="quit_btn" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("2_ff2v4")
+theme = ExtResource("7_6sj4m")
 text = "QUIT GAME"
 
 [node name="anim" type="AnimationPlayer" parent="."]
