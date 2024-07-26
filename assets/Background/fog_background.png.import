@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chh1svybeu0ud"
-path="res://.godot/imported/nave.png-3c6a3aedd0d0df7ece0bd533bcedb565.ctex"
+uid="uid://brjaumcj88rfy"
+path="res://.godot/imported/fog_background.png-b12f847ef76b8e32af981cbb2611c63c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/nave.png"
-dest_files=["res://.godot/imported/nave.png-3c6a3aedd0d0df7ece0bd533bcedb565.ctex"]
+source_file="res://assets/Background/fog_background.png"
+dest_files=["res://.godot/imported/fog_background.png-b12f847ef76b8e32af981cbb2611c63c.ctex"]
 
 [params]
 

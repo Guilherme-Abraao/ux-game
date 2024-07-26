@@ -1,10 +1,19 @@
-[gd_scene load_steps=8 format=3 uid="uid://d0enbrbhe3yq3"]
+[gd_scene load_steps=13 format=3 uid="uid://d0enbrbhe3yq3"]
 
-[ext_resource type="Texture2D" uid="uid://bda24m01ejean" path="res://asset/Background/BG_title_screen.png" id="1_qlvd7"]
 [ext_resource type="Script" path="res://scripts/title_screen.gd" id="1_ul47s"]
-[ext_resource type="Texture2D" uid="uid://bjovralajnvx" path="res://asset/game_nome (1).png" id="2_deqnr"]
-[ext_resource type="Theme" uid="uid://63yiam3bsfd8" path="res://btn_title_screen.tres" id="3_i3gtv"]
-[ext_resource type="Texture2D" uid="uid://chh1svybeu0ud" path="res://asset/nave.png" id="4_dpgx5"]
+[ext_resource type="Theme" uid="uid://b6u42r1xi417o" path="res://theme/btn_title_screen.tres" id="3_i3gtv"]
+[ext_resource type="Shader" path="res://shaders/move_bg.gdshader" id="3_jtpco"]
+[ext_resource type="Texture2D" uid="uid://w1tv68riaejb" path="res://assets/nome_game.png" id="3_kqtlw"]
+[ext_resource type="Texture2D" uid="uid://bf8s6nq5e7mp4" path="res://assets/Background/background-game.jpg" id="4_2lk4l"]
+[ext_resource type="Texture2D" uid="uid://bnyebacix6hj2" path="res://assets/nave.png" id="4_dpgx5"]
+[ext_resource type="Shader" path="res://shaders/fog.gdshader" id="5_h8uvr"]
+[ext_resource type="Texture2D" uid="uid://brjaumcj88rfy" path="res://assets/Background/fog_background.png" id="6_78gnf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0gwum"]
+shader = ExtResource("3_jtpco")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xsunc"]
+shader = ExtResource("5_h8uvr")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hbhp2"]
 
@@ -19,12 +28,35 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ul47s")
 
-[node name="bg" type="TextureRect" parent="."]
-layout_mode = 2
-offset_right = 1200.0
-offset_bottom = 675.0
-texture = ExtResource("1_qlvd7")
-expand_mode = 2
+[node name="background" type="TextureRect" parent="."]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_0gwum")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -680.0
+offset_top = -462.5
+offset_right = 680.0
+offset_bottom = 462.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_2lk4l")
+
+[node name="fog" type="TextureRect" parent="."]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_xsunc")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -900.0
+offset_top = -846.0
+offset_right = 900.0
+offset_bottom = 846.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_78gnf")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -47,7 +79,7 @@ size_flags_vertical = 4
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
-texture = ExtResource("2_deqnr")
+texture = ExtResource("3_kqtlw")
 
 [node name="HSeparator4" type="HSeparator" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2

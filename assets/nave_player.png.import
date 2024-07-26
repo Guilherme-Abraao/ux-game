@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ciyg74t8u2fm7"
-path="res://.godot/imported/Mask group (4).png-49f7ac59c8e12d5ea41b07fe7a0667ee.ctex"
+uid="uid://b5jctuk5unex1"
+path="res://.godot/imported/nave_player.png-c800e2620fede981d339079fedb12dae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Mask group (4).png"
-dest_files=["res://.godot/imported/Mask group (4).png-49f7ac59c8e12d5ea41b07fe7a0667ee.ctex"]
+source_file="res://assets/nave_player.png"
+dest_files=["res://.godot/imported/nave_player.png-c800e2620fede981d339079fedb12dae.ctex"]
 
 [params]
 

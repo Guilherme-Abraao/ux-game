@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7vjbly2db54w"
-path="res://.godot/imported/game_nome.png-60f802b06c447556e08c924cd5954fb8.ctex"
+uid="uid://drdaqyern6ghn"
+path="res://.godot/imported/Lava 1.png-200366a26f3730873e9bf69aa397504c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/game_nome.png"
-dest_files=["res://.godot/imported/game_nome.png-60f802b06c447556e08c924cd5954fb8.ctex"]
+source_file="res://assets/Lava 1.png"
+dest_files=["res://.godot/imported/Lava 1.png-200366a26f3730873e9bf69aa397504c.ctex"]
 
 [params]
 
