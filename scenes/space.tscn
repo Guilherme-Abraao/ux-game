@@ -1,5 +1,4 @@
-
-[gd_scene load_steps=17 format=3 uid="uid://odqcfq1oyax2"]
+[gd_scene load_steps=20 format=3 uid="uid://odqcfq1oyax2"]
 
 [ext_resource type="Script" path="res://scripts/space.gd" id="1_1vbxk"]
 [ext_resource type="Shader" path="res://shaders/move_bg.gdshader" id="2_uk8lv"]
@@ -11,6 +10,8 @@
 [ext_resource type="Script" path="res://scripts/nave.gd" id="8_mteom"]
 [ext_resource type="Texture2D" uid="uid://bnyebacix6hj2" path="res://assets/nave.png" id="9_oy2ik"]
 [ext_resource type="Script" path="res://scripts/hud_manager.gd" id="10_66gv5"]
+[ext_resource type="PackedScene" uid="uid://o3236kaoi0ar" path="res://scenes/estrela.tscn" id="10_aqydd"]
+[ext_resource type="Script" path="res://scripts/estrela.gd" id="10_wt6gy"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8jlme"]
 shader = ExtResource("2_uk8lv")
@@ -76,14 +77,12 @@ texture = ExtResource("5_v6twx")
 position = Vector2(600, 667)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeBaixo"]
-visible = false
 shape = SubResource("RectangleShape2D_27gqx")
 
 [node name="ParedeCima" type="StaticBody2D" parent="."]
 position = Vector2(599, 12)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeCima"]
-visible = false
 position = Vector2(-6, -1)
 shape = SubResource("RectangleShape2D_c4t2l")
 
@@ -91,18 +90,17 @@ shape = SubResource("RectangleShape2D_c4t2l")
 position = Vector2(1, 364)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeEsquerda"]
-visible = false
 shape = SubResource("RectangleShape2D_rjoxg")
 
 [node name="ParedeDireita" type="StaticBody2D" parent="."]
 position = Vector2(1201, 338)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeDireita"]
-visible = false
 position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_jvfqx")
 
 [node name="pause_menu" parent="." instance=ExtResource("6_338t3")]
+visible = true
 
 [node name="SpawnTimer" type="Timer" parent="."]
 
@@ -140,6 +138,12 @@ anchor_right = 1.0
 grow_horizontal = 2
 pivot_offset = Vector2(449, 281)
 
+[node name="estrelas" type="Node2D" parent="."]
+script = ExtResource("10_wt6gy")
+estrela_scene = ExtResource("10_aqydd")
+
+[node name="estrela" parent="estrelas" instance=ExtResource("10_aqydd")]
+
 [node name="HUD" type="CanvasLayer" parent="."]
 
 [node name="control" type="Control" parent="HUD"]
@@ -147,6 +151,10 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 6.0
+offset_right = 3.0
+offset_bottom = 6.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("10_66gv5")
@@ -156,6 +164,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = -3.0
+offset_right = -8.0
+offset_bottom = -3.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 20
