@@ -4,7 +4,7 @@ extends Node2D
 @export var estrela_scene: PackedScene 
 const SPEED = 600.0
 var rng = RandomNumberGenerator.new()
-var SPAWN_INTERVAL = rng.randf_range(2, 10.0)  # Intervalo de tempo para spawn das estrelas
+var SPAWN_INTERVAL = rng.randf_range(5.0, 15.0)  # Intervalo de tempo para spawn das estrelas
 
 func _on_body_entered(body: Node2D):
 	$anim.play("collect")
