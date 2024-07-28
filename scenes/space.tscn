@@ -12,6 +12,7 @@
 [ext_resource type="Script" path="res://scripts/hud_manager.gd" id="10_66gv5"]
 [ext_resource type="PackedScene" uid="uid://o3236kaoi0ar" path="res://scenes/estrela.tscn" id="10_aqydd"]
 [ext_resource type="Script" path="res://scripts/estrela.gd" id="10_wt6gy"]
+[ext_resource type="Texture2D" uid="uid://chatfuec1kpur" path="res://assets/coracaoLaranja.png" id="11_got3j"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8jlme"]
 shader = ExtResource("2_uk8lv")
@@ -218,6 +219,25 @@ theme_override_constants/outline_size = 19
 theme_override_constants/line_spacing = 141
 theme_override_font_sizes/font_size = 30
 text = "00:00"
+
+[node name="vida_container" type="HBoxContainer" parent="HUD/control/container"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Coracao3" type="Sprite2D" parent="HUD/control/container/vida_container"]
+position = Vector2(1119, 41)
+scale = Vector2(0.099, 0.1)
+texture = ExtResource("11_got3j")
+
+[node name="Coracao2" type="Sprite2D" parent="HUD/control/container/vida_container"]
+position = Vector2(1056, 41)
+scale = Vector2(0.099, 0.1)
+texture = ExtResource("11_got3j")
+
+[node name="Coracao1" type="Sprite2D" parent="HUD/control/container/vida_container"]
+position = Vector2(989, 41)
+scale = Vector2(0.099, 0.1)
+texture = ExtResource("11_got3j")
 
 [node name="clock_timer" type="Timer" parent="HUD/control"]
 
