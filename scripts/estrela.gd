@@ -25,7 +25,7 @@ func _ready():
 # Chamado quando o timer expira
 func _on_Timer_timeout():
 	print("Timer expired, spawning stars...")
-	spawnStars()
+	#spawnStars()
 
 func spawnStars():
 	var estrela = estrela_scene.instantiate()  # Instancia a estrela
