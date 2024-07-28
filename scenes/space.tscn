@@ -10,7 +10,7 @@
 [ext_resource type="Script" path="res://scripts/nave.gd" id="8_mteom"]
 [ext_resource type="Texture2D" uid="uid://bnyebacix6hj2" path="res://assets/nave.png" id="9_oy2ik"]
 [ext_resource type="Script" path="res://scripts/hud_manager.gd" id="10_66gv5"]
-[ext_resource type="FontFile" uid="uid://bkoieim3aw1gv" path="res://assets/Fonts/Orbitron/static/Orbitron-Bold.ttf" id="11_uu8tj"]
+[ext_resource type="FontFile" uid="uid://bkoieim3aw1gv" path="res://assets/Fonts/Orbitron-Bold.ttf" id="11_uu8tj"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8jlme"]
 shader = ExtResource("2_uk8lv")
