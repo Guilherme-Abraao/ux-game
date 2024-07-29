@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=18 format=3 uid="uid://odqcfq1oyax2"]
+=======
+[gd_scene load_steps=21 format=3 uid="uid://odqcfq1oyax2"]
+>>>>>>> dba1ab79ec686de30ce848bc86766d3e84e69912
 
 [ext_resource type="Script" path="res://scripts/space.gd" id="1_1vbxk"]
 [ext_resource type="Shader" path="res://shaders/move_bg.gdshader" id="2_uk8lv"]
@@ -10,6 +14,9 @@
 [ext_resource type="Script" path="res://scripts/nave.gd" id="8_mteom"]
 [ext_resource type="Texture2D" uid="uid://bnyebacix6hj2" path="res://assets/nave.png" id="9_oy2ik"]
 [ext_resource type="Script" path="res://scripts/hud_manager.gd" id="10_66gv5"]
+[ext_resource type="PackedScene" uid="uid://o3236kaoi0ar" path="res://scenes/estrela.tscn" id="10_aqydd"]
+[ext_resource type="Script" path="res://scripts/estrela.gd" id="10_wt6gy"]
+[ext_resource type="Texture2D" uid="uid://chatfuec1kpur" path="res://assets/coracaoLaranja.png" id="11_got3j"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8jlme"]
 shader = ExtResource("2_uk8lv")
@@ -75,14 +82,12 @@ texture = ExtResource("5_v6twx")
 position = Vector2(600, 667)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeBaixo"]
-visible = false
 shape = SubResource("RectangleShape2D_27gqx")
 
 [node name="ParedeCima" type="StaticBody2D" parent="."]
 position = Vector2(599, 12)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeCima"]
-visible = false
 position = Vector2(-6, -1)
 shape = SubResource("RectangleShape2D_c4t2l")
 
@@ -90,32 +95,31 @@ shape = SubResource("RectangleShape2D_c4t2l")
 position = Vector2(1, 364)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeEsquerda"]
-visible = false
 shape = SubResource("RectangleShape2D_rjoxg")
 
 [node name="ParedeDireita" type="StaticBody2D" parent="."]
 position = Vector2(1201, 338)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeDireita"]
-visible = false
 position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_jvfqx")
 
 [node name="pause_menu" parent="." instance=ExtResource("6_338t3")]
+visible = true
 
 [node name="SpawnTimer" type="Timer" parent="."]
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(137, 364)
 
-[node name="Asteroid" parent="Node2D" instance=ExtResource("7_1xjw3")]
-position = Vector2(0, 0)
+[node name="Area2D" type="Area2D" parent="Node2D"]
 
-[node name="RigidBody2D" type="RigidBody2D" parent="Node2D/Asteroid"]
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/Asteroid/RigidBody2D"]
-scale = Vector2(3.94737, 3.94737)
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/Area2D"]
+scale = Vector2(0.999999, 0.999999)
 shape = SubResource("CircleShape2D_eau0j")
+
+[node name="Asteroid" parent="Node2D/Area2D" instance=ExtResource("7_1xjw3")]
+position = Vector2(0, 0)
 
 [node name="nave" type="CharacterBody2D" parent="."]
 texture_filter = 1
@@ -139,6 +143,12 @@ anchor_right = 1.0
 grow_horizontal = 2
 pivot_offset = Vector2(449, 281)
 
+[node name="estrelas" type="Node2D" parent="."]
+script = ExtResource("10_wt6gy")
+estrela_scene = ExtResource("10_aqydd")
+
+[node name="estrela" parent="estrelas" instance=ExtResource("10_aqydd")]
+
 [node name="HUD" type="CanvasLayer" parent="."]
 
 [node name="control" type="Control" parent="HUD"]
@@ -146,6 +156,10 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 6.0
+offset_right = 3.0
+offset_bottom = 6.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("10_66gv5")
@@ -155,6 +169,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = -3.0
+offset_right = -8.0
+offset_bottom = -3.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 20
@@ -206,6 +224,26 @@ theme_override_constants/line_spacing = 141
 theme_override_font_sizes/font_size = 30
 text = "00:00"
 
+[node name="vida_container" type="HBoxContainer" parent="HUD/control/container"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Coracao3" type="Sprite2D" parent="HUD/control/container/vida_container"]
+position = Vector2(1119, 41)
+scale = Vector2(0.099, 0.1)
+texture = ExtResource("11_got3j")
+
+[node name="Coracao2" type="Sprite2D" parent="HUD/control/container/vida_container"]
+position = Vector2(1056, 41)
+scale = Vector2(0.099, 0.1)
+texture = ExtResource("11_got3j")
+
+[node name="Coracao1" type="Sprite2D" parent="HUD/control/container/vida_container"]
+position = Vector2(989, 41)
+scale = Vector2(0.099, 0.1)
+texture = ExtResource("11_got3j")
+
 [node name="clock_timer" type="Timer" parent="HUD/control"]
 
+[connection signal="body_entered" from="Node2D/Area2D" to="nave" method="_on_area_2d_body_entered"]
 [connection signal="timeout" from="HUD/control/clock_timer" to="HUD/control" method="_on_clock_timer_timeout"]

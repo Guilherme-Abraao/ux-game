@@ -1,6 +1,6 @@
 extends Node2D
 
-const SPEED = 600.0
+const SPEED = 200.0
 var velocity = Vector2.ZERO
 
 @export var asteroid_scene: PackedScene
