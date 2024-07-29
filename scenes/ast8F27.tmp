@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://0ht4tcyliqk8"]
+
+[ext_resource type="Texture2D" uid="uid://drdaqyern6ghn" path="res://assets/Lava 1.png" id="1_kmfwh"]
+[ext_resource type="Script" path="res://scripts/asteroide.gd" id="1_sibtv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_crvus"]
+radius = 76.3158
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gdm8n"]
+radius = 29.0689
+
+[node name="Asteroide" type="CharacterBody2D"]
+position = Vector2(286, 186)
+script = ExtResource("1_sibtv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.38, 0.38)
+shape = SubResource("CircleShape2D_crvus")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.38, 0.38)
+texture = ExtResource("1_kmfwh")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_gdm8n")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

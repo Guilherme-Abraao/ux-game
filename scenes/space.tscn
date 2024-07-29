@@ -102,17 +102,17 @@ shape = SubResource("RectangleShape2D_jvfqx")
 
 [node name="SpawnTimer" type="Timer" parent="."]
 
-[node name="nave" type="CharacterBody2D" parent="."]
+[node name="Nave" type="CharacterBody2D" parent="."]
 texture_filter = 1
 position = Vector2(600, 564)
 script = ExtResource("8_mteom")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="nave"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Nave"]
 position = Vector2(-30.8316, -27.45)
 scale = Vector2(0.609623, 0.609623)
 polygon = PackedVector2Array(-5, -63, 4, -63, 29, -17, 72, 24, 72, 52, 63, 53, 30.8906, 30.2646, 22.6888, 31.905, 22.6888, 41.7471, 30.8906, 43.3875, 39.0923, 51.5893, 42.3731, 81.1157, 19.4081, 81.1157, 19.4081, 66.3525, -19.9605, 66.3525, -19.9605, 81.1157, -44.5659, 81.1157, -42.9255, 63.0717, -31.443, 43.3875, -23.2412, 43.3875, -23.2412, 31.905, -33, 33, -63, 53, -73, 54, -72, 24, -24, -20, -23, -34)
 
-[node name="Nave" type="Sprite2D" parent="nave"]
+[node name="Nave" type="Sprite2D" parent="Nave"]
 position = Vector2(-31, -24)
 scale = Vector2(0.225989, 0.225988)
 texture = ExtResource("9_oy2ik")

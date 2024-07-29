@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 600.0
+const SPEED = 1000.0
 var hud_node
 
 func _ready():
