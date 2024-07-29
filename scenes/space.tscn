@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://odqcfq1oyax2"]
+[gd_scene load_steps=21 format=3 uid="uid://odqcfq1oyax2"]
 
 [ext_resource type="Script" path="res://scripts/space.gd" id="1_1vbxk"]
 [ext_resource type="Shader" path="res://shaders/move_bg.gdshader" id="2_uk8lv"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bloqvjpky83oj" path="res://scenes/estrela.tscn" id="10_aqydd"]
 [ext_resource type="Script" path="res://scripts/estrela.gd" id="10_wt6gy"]
 [ext_resource type="Texture2D" uid="uid://chatfuec1kpur" path="res://assets/coracaoLaranja.png" id="11_got3j"]
+[ext_resource type="FontFile" uid="uid://bkoieim3aw1gv" path="res://assets/Fonts/Orbitron-Bold.ttf" id="11_uu8tj"]
 [ext_resource type="PackedScene" uid="uid://0ht4tcyliqk8" path="res://scenes/asteroide.tscn" id="13_3d1uf"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8jlme"]
@@ -144,6 +145,19 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("10_66gv5")
 
+[node name="timer_background" type="ColorRect" parent="HUD/control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -2.013
+anchor_top = -0.405
+anchor_right = 1.974
+anchor_bottom = 1.0
+offset_left = 2416.6
+offset_top = 309.375
+offset_right = -2069.8
+offset_bottom = -593.0
+color = Color(0.992157, 0.34902, 0.129412, 1)
+
 [node name="container" type="MarginContainer" parent="HUD/control"]
 layout_mode = 1
 anchors_preset = 15
@@ -158,51 +172,35 @@ grow_vertical = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 40
 
-[node name="score_container" type="HBoxContainer" parent="HUD/control/container"]
+[node name="timer_counter" type="HBoxContainer" parent="HUD/control/container"]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
-
-[node name="score_label" type="Label" parent="HUD/control/container/score_container"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.921569, 0.764706, 1)
-theme_override_colors/font_outline_color = Color(0.992157, 0.34902, 0.129412, 1)
-theme_override_constants/outline_size = 19
-theme_override_constants/line_spacing = 141
-theme_override_font_sizes/font_size = 30
-text = "Score: "
-
-[node name="score_counter" type="Label" parent="HUD/control/container/score_container"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.921569, 0.764706, 1)
-theme_override_colors/font_outline_color = Color(0.992157, 0.34902, 0.129412, 1)
-theme_override_constants/outline_size = 19
-theme_override_constants/line_spacing = 141
-theme_override_font_sizes/font_size = 30
-text = "0000"
-
-[node name="timer_counter" type="HBoxContainer" parent="HUD/control/container"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 0
+theme_override_constants/separation = 22
 
 [node name="timer_label" type="Label" parent="HUD/control/container/timer_counter"]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.921569, 0.764706, 1)
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.0509804, 0.00392157, 0.0862745, 1)
 theme_override_colors/font_outline_color = Color(0.992157, 0.34902, 0.129412, 1)
-theme_override_constants/outline_size = 19
 theme_override_constants/line_spacing = 141
+theme_override_fonts/font = ExtResource("11_uu8tj")
 theme_override_font_sizes/font_size = 30
 text = "Tempo:"
+uppercase = true
 
 [node name="timer_counter" type="Label" parent="HUD/control/container/timer_counter"]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.921569, 0.764706, 1)
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.0509804, 0.00392157, 0.0862745, 1)
 theme_override_colors/font_outline_color = Color(0.992157, 0.34902, 0.129412, 1)
-theme_override_constants/outline_size = 19
 theme_override_constants/line_spacing = 141
+theme_override_fonts/font = ExtResource("11_uu8tj")
 theme_override_font_sizes/font_size = 30
 text = "00:00"
+uppercase = true
 
 [node name="vida_container" type="HBoxContainer" parent="HUD/control/container"]
 self_modulate = Color(1, 1, 1, 0)
@@ -224,6 +222,7 @@ scale = Vector2(0.099, 0.1)
 texture = ExtResource("11_got3j")
 
 [node name="clock_timer" type="Timer" parent="HUD/control"]
+autostart = true
 
 [node name="Asteroide" parent="." instance=ExtResource("13_3d1uf")]
 
