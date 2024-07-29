@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://o3236kaoi0ar"]
+[gd_scene load_steps=22 format=3 uid="uid://bloqvjpky83oj"]
 
 [ext_resource type="Script" path="res://scripts/estrela.gd" id="1_rwteb"]
 [ext_resource type="Texture2D" uid="uid://dx55fferjby0u" path="res://assets/sparkles/0001.png0001.png" id="2_d71iy"]
