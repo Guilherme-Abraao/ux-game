@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-[gd_scene load_steps=18 format=3 uid="uid://odqcfq1oyax2"]
-=======
-[gd_scene load_steps=21 format=3 uid="uid://odqcfq1oyax2"]
->>>>>>> dba1ab79ec686de30ce848bc86766d3e84e69912
+[gd_scene load_steps=20 format=3 uid="uid://odqcfq1oyax2"]
 
 [ext_resource type="Script" path="res://scripts/space.gd" id="1_1vbxk"]
 [ext_resource type="Shader" path="res://shaders/move_bg.gdshader" id="2_uk8lv"]
@@ -10,13 +6,13 @@
 [ext_resource type="Shader" path="res://shaders/fog.gdshader" id="4_44ok8"]
 [ext_resource type="Texture2D" uid="uid://brjaumcj88rfy" path="res://assets/Background/fog_background.png" id="5_v6twx"]
 [ext_resource type="PackedScene" uid="uid://ds23m4ungog48" path="res://prefabs/pause_menu.tscn" id="6_338t3"]
-[ext_resource type="PackedScene" uid="uid://bl7wdxxgtsd73" path="res://scenes/Asteroid.tscn" id="7_1xjw3"]
 [ext_resource type="Script" path="res://scripts/nave.gd" id="8_mteom"]
 [ext_resource type="Texture2D" uid="uid://bnyebacix6hj2" path="res://assets/nave.png" id="9_oy2ik"]
 [ext_resource type="Script" path="res://scripts/hud_manager.gd" id="10_66gv5"]
-[ext_resource type="PackedScene" uid="uid://o3236kaoi0ar" path="res://scenes/estrela.tscn" id="10_aqydd"]
+[ext_resource type="PackedScene" uid="uid://bloqvjpky83oj" path="res://scenes/estrela.tscn" id="10_aqydd"]
 [ext_resource type="Script" path="res://scripts/estrela.gd" id="10_wt6gy"]
 [ext_resource type="Texture2D" uid="uid://chatfuec1kpur" path="res://assets/coracaoLaranja.png" id="11_got3j"]
+[ext_resource type="PackedScene" uid="uid://0ht4tcyliqk8" path="res://scenes/asteroide.tscn" id="13_3d1uf"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8jlme"]
 shader = ExtResource("2_uk8lv")
@@ -35,9 +31,6 @@ size = Vector2(20, 743)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jvfqx"]
 size = Vector2(20, 688)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_eau0j"]
-radius = 19.0
 
 [node name="Space" type="Control"]
 layout_mode = 3
@@ -105,21 +98,8 @@ position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_jvfqx")
 
 [node name="pause_menu" parent="." instance=ExtResource("6_338t3")]
-visible = true
 
 [node name="SpawnTimer" type="Timer" parent="."]
-
-[node name="Node2D" type="Node2D" parent="."]
-position = Vector2(137, 364)
-
-[node name="Area2D" type="Area2D" parent="Node2D"]
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/Area2D"]
-scale = Vector2(0.999999, 0.999999)
-shape = SubResource("CircleShape2D_eau0j")
-
-[node name="Asteroid" parent="Node2D/Area2D" instance=ExtResource("7_1xjw3")]
-position = Vector2(0, 0)
 
 [node name="nave" type="CharacterBody2D" parent="."]
 texture_filter = 1
@@ -245,5 +225,6 @@ texture = ExtResource("11_got3j")
 
 [node name="clock_timer" type="Timer" parent="HUD/control"]
 
-[connection signal="body_entered" from="Node2D/Area2D" to="nave" method="_on_area_2d_body_entered"]
+[node name="Asteroide" parent="." instance=ExtResource("13_3d1uf")]
+
 [connection signal="timeout" from="HUD/control/clock_timer" to="HUD/control" method="_on_clock_timer_timeout"]

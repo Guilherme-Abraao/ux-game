@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cslul2yiyf6cg"]
 
-[ext_resource type="Script" path="res://scripts/Asteroid.gd" id="1_ww85f"]
+[ext_resource type="Script" path="res://scripts/estrela.gd" id="1_ww85f"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_ww85f")
