@@ -1,7 +1,7 @@
 extends Node2D
 
 # Exporta a cena do asteroide para ser configurada no editor
-export(PackedScene) var AsteroidScene
+export(PackedScene) var asteroide
 const ASTEROID_SPAWN_INTERVAL = 2.0
 
 func _ready():
