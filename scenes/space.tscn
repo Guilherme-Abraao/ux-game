@@ -1,5 +1,4 @@
-
-[gd_scene load_steps=17 format=3 uid="uid://odqcfq1oyax2"]
+[gd_scene load_steps=18 format=3 uid="uid://odqcfq1oyax2"]
 
 [ext_resource type="Script" path="res://scripts/space.gd" id="1_1vbxk"]
 [ext_resource type="Shader" path="res://shaders/move_bg.gdshader" id="2_uk8lv"]
