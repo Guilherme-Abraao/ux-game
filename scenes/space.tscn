@@ -13,7 +13,7 @@
 [ext_resource type="Script" path="res://scripts/estrela.gd" id="10_wt6gy"]
 [ext_resource type="Texture2D" uid="uid://chatfuec1kpur" path="res://assets/coracaoLaranja.png" id="11_got3j"]
 [ext_resource type="FontFile" uid="uid://bkoieim3aw1gv" path="res://assets/Fonts/Orbitron-Bold.ttf" id="11_uu8tj"]
-[ext_resource type="PackedScene" uid="uid://by0oypndhrlqx" path="res://scenes/asteroide.tscn" id="13_3d1uf"]
+[ext_resource type="PackedScene" uid="uid://0ht4tcyliqk8" path="res://scenes/asteroide.tscn" id="13_3d1uf"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8jlme"]
 shader = ExtResource("2_uk8lv")
