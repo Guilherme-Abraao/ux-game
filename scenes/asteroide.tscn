@@ -6,7 +6,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_crvus"]
 radius = 73.6842
 
-[node name="Asteroide" type="CharacterBody2D"]
+[node name="Asteroide" type="Area2D"]
 position = Vector2(286, 186)
 script = ExtResource("1_wqges")
 
