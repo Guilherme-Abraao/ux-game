@@ -96,7 +96,7 @@ theme_override_styles/separator = SubResource("StyleBoxEmpty_hbhp2")
 [node name="start_btn" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_i3gtv")
-text = "START"
+text = "JOGAR"
 
 [node name="HSeparator" type="HSeparator" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -105,7 +105,7 @@ theme_override_styles/separator = SubResource("StyleBoxEmpty_hbhp2")
 [node name="credits_btn" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_i3gtv")
-text = "CREDITS"
+text = "TUTORIAL"
 
 [node name="HSeparator2" type="HSeparator" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -114,7 +114,7 @@ theme_override_styles/separator = SubResource("StyleBoxEmpty_cpn8e")
 [node name="quit_btn" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_i3gtv")
-text = "QUIT GAME
+text = "SAIR
 "
 
 [node name="mochi" type="TextureRect" parent="MarginContainer/HBoxContainer"]

@@ -11,7 +11,6 @@ events = [SubResource("InputEventAction_jm6mu")]
 
 [node name="pause_menu" type="CanvasLayer"]
 process_mode = 3
-visible = false
 script = ExtResource("1_3klae")
 
 [node name="bg_overlay" type="ColorRect" parent="."]
@@ -36,12 +35,12 @@ grow_vertical = 2
 layout_mode = 2
 theme = ExtResource("1_cndoq")
 shortcut = SubResource("Shortcut_vyecr")
-text = "RESUME"
+text = "CONTINUAR"
 
 [node name="quit_btn2" type="Button" parent="menu_holder"]
 layout_mode = 2
 theme = ExtResource("1_cndoq")
-text = "QUIT GAME"
+text = "SAIR"
 
 [connection signal="pressed" from="menu_holder/resume_btn" to="." method="_on_resume_btn_pressed"]
 [connection signal="pressed" from="menu_holder/quit_btn2" to="." method="_on_quit_btn_2_pressed"]
