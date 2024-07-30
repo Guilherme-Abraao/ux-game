@@ -205,6 +205,7 @@ text = "00:00"
 uppercase = true
 
 [node name="vida_container" type="HBoxContainer" parent="HUD/control/container"]
+visible = false
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 
