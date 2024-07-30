@@ -20,7 +20,7 @@ shader = ExtResource("3_af41k")
 font_size = 32
 
 [sub_resource type="LabelSettings" id="LabelSettings_y0cak"]
-font_size = 24
+font_size = 20
 
 [sub_resource type="Animation" id="Animation_4nxus"]
 length = 0.001
@@ -232,6 +232,30 @@ layout_mode = 2
 theme_override_styles/separator = SubResource("StyleBoxEmpty_44v10")
 
 [node name="HSeparator14" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_44v10")
+
+[node name="Label6" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "COMO PAUSAR?"
+label_settings = SubResource("LabelSettings_7yjdt")
+horizontal_alignment = 1
+
+[node name="HSeparator17" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_44v10")
+
+[node name="Label7" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Basta clicar na tecla \"Esc\" do teclado e o jogo será pausado"
+label_settings = SubResource("LabelSettings_y0cak")
+horizontal_alignment = 1
+
+[node name="HSeparator18" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_44v10")
+
+[node name="HSeparator19" type="HSeparator" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_styles/separator = SubResource("StyleBoxEmpty_44v10")
 
