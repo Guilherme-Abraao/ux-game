@@ -1,82 +1,82 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1722443542
-icon.svg::CompressedTexture2D::4397087695459678402::1722367945::1722367952::1::::<><>::
-::res://assets/::1722443521
-coracaoLaranja.png::CompressedTexture2D::5265326881456763301::1722365944::1722369177::1::::<><>::
-cores.txt::TextFile::-1::1722365944::0::1::::<><>::
-estrela.png::CompressedTexture2D::6194469294742689740::1722365944::1722369178::1::::<><>::
-game_over.png::CompressedTexture2D::7561887726186012007::1722365944::1722369177::1::::<><>::
-Lava 1.png::CompressedTexture2D::8358695366421132667::1722365944::1722369177::1::::<><>::
-nave.png::CompressedTexture2D::3348665374334982225::1722365944::1722369177::1::::<><>::
-nave_player.png::CompressedTexture2D::4510821823995689376::1722365944::1722369177::1::::<><>::
-nome_game.png::CompressedTexture2D::1599021186162330275::1722365944::1722369177::1::::<><>::
-::res://assets/asteroides/::1722443521
-azul_claro.png::CompressedTexture2D::4531345403759749550::1722436465::1722436627::1::::<><>::
-azul_escuro.png::CompressedTexture2D::7681025637767163178::1722436497::1722436627::1::::<><>::
-lava.png::CompressedTexture2D::6426605058877130463::1722436530::1722436627::1::::<><>::
-roxa.png::CompressedTexture2D::1966772335520944454::1722436563::1722436627::1::::<><>::
-vermelho.png::CompressedTexture2D::5884808454296211697::1722436590::1722436627::1::::<><>::
-::res://assets/audio/::1722443521
-gameover.wav::AudioStreamWAV::3646474213221838003::1722360082::1722380138::1::::<><>::
-game_music.wav::AudioStreamWAV::3883909323471560487::1722283983::1722380088::1::::<><>::
-game_over_tela.wav::AudioStreamWAV::84064927069635600::1722437485::1722437502::1::::<><>::
-menu_music.wav::AudioStreamWAV::4147071152869919639::1722437269::1722437504::1::::<><>::
-::res://assets/Background/::1722443521
-background-game.jpg::CompressedTexture2D::2806638342138186443::1722365944::1722369178::1::::<><>::
-BG_title_screen.png::CompressedTexture2D::5096295997644140006::1722365944::1722369178::1::::<><>::
-fog_background.png::CompressedTexture2D::3598246775028432830::1722365944::1722369178::1::::<><>::
-::res://assets/Fonts/::1722443521
-Orbitron-Bold.ttf::FontFile::3117703727745554041::1722365944::1722369175::1::::<><>::
-::res://assets/sparkles/::1722443521
-0001.png0001.png::CompressedTexture2D::8837367495708825214::1722365944::1722369178::1::::<><>::
-0001.png0002.png::CompressedTexture2D::3921084935492060513::1722365944::1722369178::1::::<><>::
-0001.png0003.png::CompressedTexture2D::7838654880861542182::1722365944::1722369178::1::::<><>::
-::res://assets/star coin animation Pack/::1722443521
-::res://assets/star coin animation Pack/star coin blink/::1722443521
-star coin normal.png::CompressedTexture2D::7811831803771542596::1722365944::1722369178::1::::<><>::
-star coin white light.png::CompressedTexture2D::1695742125427372987::1722365944::1722369177::1::::<><>::
-::res://assets/star coin animation Pack/star coin rotate/::1722443521
-star coin rotate 1.png::CompressedTexture2D::1306486807294703208::1722365944::1722369177::1::::<><>::
-star coin rotate 2.png::CompressedTexture2D::2777491524081396210::1722365944::1722369177::1::::<><>::
-star coin rotate 3.png::CompressedTexture2D::4320903089552266289::1722365944::1722369176::1::::<><>::
-star coin rotate 4.png::CompressedTexture2D::8964634365669312217::1722365944::1722369176::1::::<><>::
-star coin rotate 5.png::CompressedTexture2D::838142399170938055::1722365944::1722369176::1::::<><>::
-star coin rotate 6.png::CompressedTexture2D::623497269620335972::1722365944::1722369177::1::::<><>::
-::res://assets/star coin animation Pack/star coin shine/::1722443521
-star coin 1.png::CompressedTexture2D::5258185582575372904::1722365944::1722369177::1::::<><>::
-star coin 2.png::CompressedTexture2D::198011282773126691::1722365944::1722369177::1::::<><>::
-star coin 3.png::CompressedTexture2D::8415533438543295877::1722365944::1722369177::1::::<><>::
-star coin 4.png::CompressedTexture2D::6283896205801541472::1722365944::1722369177::1::::<><>::
-star coin 5.png::CompressedTexture2D::4495361017363043617::1722365944::1722369177::1::::<><>::
-star coin 6.png::CompressedTexture2D::2182157167371525833::1722365944::1722369177::1::::<><>::
-::res://prefabs/::1722443521
-game_over.tscn::PackedScene::463145017581299480::1722443350::0::1::::<><>::res://scripts/game_over.gd<>res://shaders/move_bg.gdshader<>uid://bf8s6nq5e7mp4::::res://assets/Background/background-game.jpg<>res://shaders/fog.gdshader<>uid://brjaumcj88rfy::::res://assets/Background/fog_background.png<>uid://df0bglckgau1d::::res://assets/game_over.png<>uid://b6u42r1xi417o::::res://theme/btn_title_screen.tres<>uid://bgysi34xwhum::::res://assets/audio/game_over_tela.wav
-pause_menu.tscn::PackedScene::8480122495920299011::1722381496::0::1::::<><>::res://scripts/pause_menu.gd<>uid://b17j51omndg6v::::res://theme/pause_menu.tres
-title_screen.tscn::PackedScene::8923032654512499804::1722443350::0::1::::<><>::res://scripts/title_screen.gd<>uid://b6u42r1xi417o::::res://theme/btn_title_screen.tres<>res://shaders/move_bg.gdshader<>uid://w1tv68riaejb::::res://assets/nome_game.png<>uid://bf8s6nq5e7mp4::::res://assets/Background/background-game.jpg<>uid://bnyebacix6hj2::::res://assets/nave.png<>res://shaders/fog.gdshader<>uid://brjaumcj88rfy::::res://assets/Background/fog_background.png<>uid://b0c4wklfgfk5l::::res://assets/audio/menu_music.wav
-tutorial_screen.tscn::PackedScene::1706859535271571669::1722443260::0::1::::<><>::res://shaders/move_bg.gdshader<>res://scripts/tutorial_screen.gd<>uid://bf8s6nq5e7mp4::::res://assets/Background/background-game.jpg<>res://shaders/fog.gdshader<>uid://brjaumcj88rfy::::res://assets/Background/fog_background.png<>uid://w1tv68riaejb::::res://assets/nome_game.png<>uid://b6u42r1xi417o::::res://theme/btn_title_screen.tres<>uid://b0c4wklfgfk5l::::res://assets/audio/menu_music.wav
-::res://scenes/::1722443522
-asteroide.tscn::PackedScene::1541259663547853003::1722443349::0::1::::<><>::uid://drdaqyern6ghn::::res://assets/Lava 1.png<>res://scripts/asteroide.gd<>uid://b5tauj4ev4q1c::::res://assets/asteroides/azul_claro.png<>uid://dho0mt1evkjks::::res://assets/asteroides/azul_escuro.png<>uid://3aypnxm6jjbi::::res://assets/asteroides/roxa.png<>uid://cp3v62nmgn7g4::::res://assets/asteroides/vermelho.png
-background.tscn::PackedScene::2079087547447920033::1722437082::0::1::::<><>::res://shaders/move_bg.gdshader<>uid://bf8s6nq5e7mp4::::res://assets/Background/background-game.jpg
-fog.tscn::PackedScene::4295713839863551839::1722437082::0::1::::<><>::res://shaders/fog.gdshader<>uid://brjaumcj88rfy::::res://assets/Background/fog_background.png
-hud.tscn::PackedScene::3675137332210648819::1722443350::0::1::::<><>::uid://bkoieim3aw1gv::::res://assets/Fonts/Orbitron-Bold.ttf<>res://scripts/hud.gd
-main.tscn::PackedScene::5353680251633313494::1722443350::0::1::::<><>::res://scripts/main.gd<>uid://2s7xo26fmg4s::::res://scenes/nave.tscn<>uid://v7uk6vmlfltb::::res://scenes/asteroide.tscn<>uid://br7m5rsyu8uet::::res://assets/audio/gameover.wav<>uid://4vejd8j167qj::::res://scenes/background.tscn<>uid://bvlnoiq0swllv::::res://assets/audio/game_music.wav<>uid://b2g41q527fk20::::res://scenes/fog.tscn<>uid://bsmi8fae8q4k2::::res://scenes/hud.tscn<>uid://ds23m4ungog48::::res://prefabs/pause_menu.tscn
-nave.tscn::PackedScene::1934242373280570452::1722443349::0::1::::<><>::res://scripts/nave.gd<>uid://bnyebacix6hj2::::res://assets/nave.png
-space.tscn::PackedScene::-1::1722366700::0::1::::<><>::
-::res://scripts/::1722443522
-asteroide.gd::GDScript::-1::1722435555::0::1::::<>RigidBody2D<>::
-game_over.gd::GDScript::-1::1722443134::0::1::::<>Control<>::
-hud.gd::GDScript::-1::1722435083::0::1::::<>CanvasLayer<>::
-main.gd::GDScript::-1::1722443097::0::1::::<>Node<>::
-nave.gd::GDScript::-1::1722437961::0::1::::<>Area2D<>::
-pause_menu.gd::GDScript::-1::1722385259::0::1::::<>CanvasLayer<>::
-title_screen.gd::GDScript::-1::1722438050::0::1::::<>Control<>::
-tutorial_screen.gd::GDScript::-1::1722443260::0::1::::<>Control<>::
-::res://shaders/::1722443522
-fog.gdshader::Shader::-1::1722365944::0::1::::<><>::
-move_bg.gdshader::Shader::-1::1722365944::0::1::::<><>::
-moviment_bg.gdshader::Shader::-1::1722365944::0::1::::<><>::
-::res://singletons/::1722443522
-globals.gd::GDScript::-1::1722443065::0::1::::<>Node<>::
-::res://theme/::1722443522
-btn_title_screen.tres::Theme::4605372334897703806::1722437082::0::1::::<><>::
-pause_menu.tres::Theme::4277992120960989875::1722365944::0::1::::<><>::
+::res://::1722449626
+icon.svg::CompressedTexture2D::4397087695459678402::1722449460::1722449594::1::::<><>::
+::res://assets/::1722449593
+coracaoLaranja.png::CompressedTexture2D::5265326881456763301::1722449460::1722449460::1::::<><>::
+cores.txt::TextFile::-1::1722449460::0::1::::<><>::
+estrela.png::CompressedTexture2D::6194469294742689740::1722449460::1722449460::1::::<><>::
+game_over.png::CompressedTexture2D::7561887726186012007::1722449460::1722449460::1::::<><>::
+Lava 1.png::CompressedTexture2D::8358695366421132667::1722449460::1722449460::1::::<><>::
+nave.png::CompressedTexture2D::3348665374334982225::1722449460::1722449460::1::::<><>::
+nave_player.png::CompressedTexture2D::4510821823995689376::1722449460::1722449460::1::::<><>::
+nome_game.png::CompressedTexture2D::1599021186162330275::1722449460::1722449460::1::::<><>::
+::res://assets/asteroides/::1722449593
+azul_claro.png::CompressedTexture2D::4531345403759749550::1722449593::1722449593::1::::<><>::
+azul_escuro.png::CompressedTexture2D::7681025637767163178::1722449593::1722449593::1::::<><>::
+lava.png::CompressedTexture2D::6426605058877130463::1722449593::1722449593::1::::<><>::
+roxa.png::CompressedTexture2D::1966772335520944454::1722449593::1722449593::1::::<><>::
+vermelho.png::CompressedTexture2D::5884808454296211697::1722449593::1722449593::1::::<><>::
+::res://assets/audio/::1722449594
+gameover.wav::AudioStreamWAV::3646474213221838003::1722449593::1722449593::1::::<><>::
+game_music.wav::AudioStreamWAV::3883909323471560487::1722449593::1722449593::1::::<><>::
+game_over_tela.wav::AudioStreamWAV::84064927069635600::1722449593::1722449593::1::::<><>::
+menu_music.wav::AudioStreamWAV::4147071152869919639::1722449594::1722449594::1::::<><>::
+::res://assets/Background/::1722449460
+background-game.jpg::CompressedTexture2D::2806638342138186443::1722449460::1722449460::1::::<><>::
+BG_title_screen.png::CompressedTexture2D::5096295997644140006::1722449460::1722449460::1::::<><>::
+fog_background.png::CompressedTexture2D::3598246775028432830::1722449460::1722449460::1::::<><>::
+::res://assets/Fonts/::1722449460
+Orbitron-Bold.ttf::FontFile::3117703727745554041::1722449460::1722449460::1::::<><>::
+::res://assets/sparkles/::1722449460
+0001.png0001.png::CompressedTexture2D::8837367495708825214::1722449460::1722449460::1::::<><>::
+0001.png0002.png::CompressedTexture2D::3921084935492060513::1722449460::1722449460::1::::<><>::
+0001.png0003.png::CompressedTexture2D::7838654880861542182::1722449460::1722449460::1::::<><>::
+::res://assets/star coin animation Pack/::1722449460
+::res://assets/star coin animation Pack/star coin blink/::1722449460
+star coin normal.png::CompressedTexture2D::7811831803771542596::1722449460::1722449460::1::::<><>::
+star coin white light.png::CompressedTexture2D::1695742125427372987::1722449460::1722449460::1::::<><>::
+::res://assets/star coin animation Pack/star coin rotate/::1722449460
+star coin rotate 1.png::CompressedTexture2D::1306486807294703208::1722449460::1722449460::1::::<><>::
+star coin rotate 2.png::CompressedTexture2D::2777491524081396210::1722449460::1722449460::1::::<><>::
+star coin rotate 3.png::CompressedTexture2D::4320903089552266289::1722449460::1722449460::1::::<><>::
+star coin rotate 4.png::CompressedTexture2D::8964634365669312217::1722449460::1722449460::1::::<><>::
+star coin rotate 5.png::CompressedTexture2D::838142399170938055::1722449460::1722449460::1::::<><>::
+star coin rotate 6.png::CompressedTexture2D::623497269620335972::1722449460::1722449460::1::::<><>::
+::res://assets/star coin animation Pack/star coin shine/::1722449460
+star coin 1.png::CompressedTexture2D::5258185582575372904::1722449460::1722449460::1::::<><>::
+star coin 2.png::CompressedTexture2D::198011282773126691::1722449460::1722449460::1::::<><>::
+star coin 3.png::CompressedTexture2D::8415533438543295877::1722449460::1722449460::1::::<><>::
+star coin 4.png::CompressedTexture2D::6283896205801541472::1722449460::1722449460::1::::<><>::
+star coin 5.png::CompressedTexture2D::4495361017363043617::1722449460::1722449460::1::::<><>::
+star coin 6.png::CompressedTexture2D::2182157167371525833::1722449460::1722449460::1::::<><>::
+::res://prefabs/::1722449594
+game_over.tscn::PackedScene::463145017581299480::1722449594::0::1::::<><>::res://scripts/game_over.gd<>res://shaders/move_bg.gdshader<>uid://bf8s6nq5e7mp4::::res://assets/Background/background-game.jpg<>res://shaders/fog.gdshader<>uid://brjaumcj88rfy::::res://assets/Background/fog_background.png<>uid://df0bglckgau1d::::res://assets/game_over.png<>uid://b6u42r1xi417o::::res://theme/btn_title_screen.tres<>uid://bgysi34xwhum::::res://assets/audio/game_over_tela.wav
+pause_menu.tscn::PackedScene::8480122495920299011::1722449460::0::1::::<><>::res://scripts/pause_menu.gd<>uid://b17j51omndg6v::::res://theme/pause_menu.tres
+title_screen.tscn::PackedScene::8923032654512499804::1722449594::0::1::::<><>::res://scripts/title_screen.gd<>uid://b6u42r1xi417o::::res://theme/btn_title_screen.tres<>res://shaders/move_bg.gdshader<>uid://w1tv68riaejb::::res://assets/nome_game.png<>uid://bf8s6nq5e7mp4::::res://assets/Background/background-game.jpg<>uid://bnyebacix6hj2::::res://assets/nave.png<>res://shaders/fog.gdshader<>uid://brjaumcj88rfy::::res://assets/Background/fog_background.png<>uid://b0c4wklfgfk5l::::res://assets/audio/menu_music.wav
+tutorial_screen.tscn::PackedScene::1706859535271571669::1722449594::0::1::::<><>::res://shaders/move_bg.gdshader<>res://scripts/tutorial_screen.gd<>uid://bf8s6nq5e7mp4::::res://assets/Background/background-game.jpg<>res://shaders/fog.gdshader<>uid://brjaumcj88rfy::::res://assets/Background/fog_background.png<>uid://w1tv68riaejb::::res://assets/nome_game.png<>uid://b6u42r1xi417o::::res://theme/btn_title_screen.tres<>uid://b0c4wklfgfk5l::::res://assets/audio/menu_music.wav
+::res://scenes/::1722449594
+asteroide.tscn::PackedScene::1541259663547853003::1722449594::0::1::::<><>::uid://drdaqyern6ghn::::res://assets/Lava 1.png<>res://scripts/asteroide.gd<>uid://b5tauj4ev4q1c::::res://assets/asteroides/azul_claro.png<>uid://dho0mt1evkjks::::res://assets/asteroides/azul_escuro.png<>uid://3aypnxm6jjbi::::res://assets/asteroides/roxa.png<>uid://cp3v62nmgn7g4::::res://assets/asteroides/vermelho.png
+background.tscn::PackedScene::2079087547447920033::1722449594::0::1::::<><>::res://shaders/move_bg.gdshader<>uid://bf8s6nq5e7mp4::::res://assets/Background/background-game.jpg
+fog.tscn::PackedScene::4295713839863551839::1722449594::0::1::::<><>::res://shaders/fog.gdshader<>uid://brjaumcj88rfy::::res://assets/Background/fog_background.png
+hud.tscn::PackedScene::3675137332210648819::1722449594::0::1::::<><>::uid://bkoieim3aw1gv::::res://assets/Fonts/Orbitron-Bold.ttf<>res://scripts/hud.gd
+Main.tscn::PackedScene::5353680251633313494::1722449594::0::1::::<><>::res://scripts/main.gd<>uid://2s7xo26fmg4s::::res://scenes/nave.tscn<>uid://v7uk6vmlfltb::::res://scenes/asteroide.tscn<>uid://br7m5rsyu8uet::::res://assets/audio/gameover.wav<>uid://4vejd8j167qj::::res://scenes/background.tscn<>uid://bvlnoiq0swllv::::res://assets/audio/game_music.wav<>uid://b2g41q527fk20::::res://scenes/fog.tscn<>uid://bsmi8fae8q4k2::::res://scenes/hud.tscn<>uid://ds23m4ungog48::::res://prefabs/pause_menu.tscn
+nave.tscn::PackedScene::1934242373280570452::1722449594::0::1::::<><>::res://scripts/nave.gd<>uid://bnyebacix6hj2::::res://assets/nave.png
+space.tscn::PackedScene::989812276201301129::1722449594::0::1::::<><>::res://scripts/space.gd<>res://shaders/move_bg.gdshader<>uid://bf8s6nq5e7mp4::::res://assets/Background/background-game.jpg<>res://shaders/fog.gdshader<>uid://brjaumcj88rfy::::res://assets/Background/fog_background.png<>uid://ds23m4ungog48::::res://prefabs/pause_menu.tscn<>res://scripts/nave.gd<>uid://bnyebacix6hj2::::res://assets/nave.png<>res://scripts/hud_manager.gd<>uid://bloqvjpky83oj::::res://scenes/estrela.tscn<>res://scripts/estrela.gd<>uid://chatfuec1kpur::::res://assets/coracaoLaranja.png<>uid://bkoieim3aw1gv::::res://assets/Fonts/Orbitron-Bold.ttf<>uid://0ht4tcyliqk8::::res://scenes/asteroide.tscn<>res://scripts/nave2.gd
+::res://scripts/::1722449594
+asteroide.gd::GDScript::-1::1722449594::0::1::::<>RigidBody2D<>::
+game_over.gd::GDScript::-1::1722449594::0::1::::<>Control<>::
+hud.gd::GDScript::-1::1722449594::0::1::::<>CanvasLayer<>::
+Main.gd::GDScript::-1::1722449594::0::1::::<>Node<>::
+nave.gd::GDScript::-1::1722449594::0::1::::<>Area2D<>::
+pause_menu.gd::GDScript::-1::1722449460::0::1::::<>CanvasLayer<>::
+title_screen.gd::GDScript::-1::1722449594::0::1::::<>Control<>::
+tutorial_screen.gd::GDScript::-1::1722449594::0::1::::<>Control<>::
+::res://shaders/::1722449460
+fog.gdshader::Shader::-1::1722449460::0::1::::<><>::
+move_bg.gdshader::Shader::-1::1722449460::0::1::::<><>::
+moviment_bg.gdshader::Shader::-1::1722449460::0::1::::<><>::
+::res://singletons/::1722449594
+globals.gd::GDScript::-1::1722449594::0::1::::<>Node<>::
+::res://theme/::1722449460
+btn_title_screen.tres::Theme::4605372334897703806::1722449460::0::1::::<><>::
+pause_menu.tres::Theme::4277992120960989875::1722449460::0::1::::<><>::

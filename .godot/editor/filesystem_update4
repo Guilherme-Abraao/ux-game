@@ -1,8 +1,6 @@
-res://scenes/nave.tscn
-res://scripts/main.gd
+res://prefabs/game_over.tscn
 res://theme/btn_title_screen.tres
+res://scenes/nave.tscn
 res://scenes/asteroide.tscn
-res://scenes/main.tscn
 res://scenes/hud.tscn
 res://prefabs/title_screen.tscn
-res://prefabs/game_over.tscn

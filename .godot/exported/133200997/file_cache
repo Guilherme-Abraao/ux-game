@@ -1,0 +1,12 @@
+res://prefabs/game_over.tscn::d6e546583401dfa37a8dc3ab1e0aa16e::1722449666::res://.godot/exported/133200997/export-7da0aaf155c786975f2c6c70ddc81a75-game_over.scn
+res://prefabs/pause_menu.tscn::f8d951bad98bd6b20a0a6290b0fb7366::1722449460::res://.godot/exported/133200997/export-c43a75ce232219e652145b532a63709b-pause_menu.scn
+res://prefabs/title_screen.tscn::2a5dfcb8a24245357e170bdbbb41c24f::1722449665::res://.godot/exported/133200997/export-0f29b64d4f0d75ae9ec4b76fe8cfc7de-title_screen.scn
+res://prefabs/tutorial_screen.tscn::19255a3c22aff8a6da19d748c383ea0d::1722449594::res://.godot/exported/133200997/export-3402d7196af3513a09cb9a8062d77476-tutorial_screen.scn
+res://scenes/asteroide.tscn::fc1856423880ca21164ffe4c836a22db::1722449665::res://.godot/exported/133200997/export-29bb7275a632acd493d8c50e34e5392c-asteroide.scn
+res://scenes/background.tscn::25a76a4c3f7d5f5a1b8c5d10de2da729::1722449594::res://.godot/exported/133200997/export-f1e46807209045e58980fb2be1ec694d-background.scn
+res://scenes/fog.tscn::a7a55391a9ad3c9ab9747d0a76c64497::1722449594::res://.godot/exported/133200997/export-6a20252baed576958cc614cc0d9c8285-fog.scn
+res://scenes/hud.tscn::021354925514a647306f87d1457b1059::1722449665::res://.godot/exported/133200997/export-38bf74ff262409a94a41206b2b776d33-hud.scn
+res://scenes/nave.tscn::6cefba24b7c64600c05dfc80e7539c2f::1722449665::res://.godot/exported/133200997/export-3480d9be6c69e11e5a846224f6d71392-nave.scn
+res://scenes/main.tscn::604cef6c6093b4e92124fdc9f30b6d2b::1722449665::res://.godot/exported/133200997/export-3ad5c15c4f3250da0cc7c1af1770d85f-main.scn
+res://theme/btn_title_screen.tres::c97cf0a51b5601ac2aaeb0268b7054c7::1722449665::res://.godot/exported/133200997/export-c7f34a95992397e79d585f7d37d7ea5e-btn_title_screen.res
+res://theme/pause_menu.tres::f15f2f67768848d2419f2604ec8d0056::1722449460::res://.godot/exported/133200997/export-92f2ab4d881c986c4ca3f0d1266220b0-pause_menu.res
