@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2g41q527fk20"]
+
+[ext_resource type="Shader" path="res://shaders/fog.gdshader" id="1_6h03i"]
+[ext_resource type="Texture2D" uid="uid://brjaumcj88rfy" path="res://assets/Background/fog_background.png" id="2_7x8f1"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3yn0o"]
+shader = ExtResource("1_6h03i")
+
+[node name="fog" type="TextureRect"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_3yn0o")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -900.0
+offset_top = -846.0
+offset_right = 900.0
+offset_bottom = 846.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_7x8f1")

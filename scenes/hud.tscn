@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://bsmi8fae8q4k2"]
+
+[ext_resource type="FontFile" uid="uid://bkoieim3aw1gv" path="res://assets/Fonts/Orbitron-Bold.ttf" id="1_8nlra"]
+[ext_resource type="Script" path="res://scripts/hud.gd" id="1_nrklv"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_nrklv")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+light_mask = 0
+offset_left = -2.0
+offset_top = 16.0
+offset_right = 292.0
+offset_bottom = 65.0
+color = Color(0.992157, 0.34902, 0.129412, 1)
+
+[node name="ScoreLabel" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 243.605
+offset_top = 7.82683
+offset_right = 283.605
+offset_bottom = 58.8268
+theme_override_colors/font_color = Color(0.0509804, 0.00392157, 0.0862745, 1)
+theme_override_fonts/font = ExtResource("1_8nlra")
+theme_override_font_sizes/font_size = 25
+text = "0"
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 17.163
+offset_top = 8.26523
+offset_right = 217.163
+offset_bottom = 41.2652
+theme_override_colors/font_color = Color(0.0509804, 0.00392157, 0.0862745, 1)
+theme_override_fonts/font = ExtResource("1_8nlra")
+theme_override_font_sizes/font_size = 25
+text = "PONTUAÇÃO:"

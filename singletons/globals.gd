@@ -1,4 +1,3 @@
 extends Node
 
-var coins := 0
-var score := 0
+var pontuacao_maxima := 0

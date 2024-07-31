@@ -1,27 +1,56 @@
-extends CharacterBody2D
+extends Area2D
 
-const SPEED = 600.0
-var hud_node
+signal hit
+
+@export var SPEED = 500 
+var screen_size 
 
 func _ready():
-	hud_node = get_node("../HUD/control")
+	screen_size = get_viewport_rect().size
+	hide()
 
-func _physics_process(delta):
-	# Get the input direction and handle the movement.
-	var direction = Vector2(
-		Input.get_axis("ui_left", "ui_right"),
-		Input.get_axis("ui_up", "ui_down")
-	)
-
-	if direction != Vector2.ZERO:
-		velocity = direction.normalized() * SPEED
+func _process(delta):
+	var velocity = Vector2.ZERO
+	if Input.is_action_pressed("ui_right"):
+		velocity.x += 1
+	if Input.is_action_pressed("ui_left"):
+		velocity.x -= 1
+	if Input.is_action_pressed("ui_down"):
+		velocity.y += 1
+	if Input.is_action_pressed("ui_up"):
+		velocity.y -= 1
+		
+	if velocity.length() > 0:
+		velocity = velocity.normalized() * SPEED
+		$AnimatedSprite2D.play()
 	else:
-		velocity = Vector2.ZERO
+		$AnimatedSprite2D.stop()
 
-	move_and_slide()
+	position += velocity * delta
+	position = position.clamp(Vector2.ZERO, screen_size)
 
-func _on_area_2d_body_entered(body):
-	print("COLIDIU")
-	
-	if hud_node && hud_node.vidaAtual > 0:
-		hud_node.vidaAtual = hud_node.vidaAtual - 1
+	if velocity.x != 0:
+		pass
+		#$AnimatedSprite2D.animation = &"right"
+		#$AnimatedSprite2D.flip_v = false
+		#$AnimatedSprite2D.flip_h = velocity.x < 0
+	#elif velocity.y != 0:
+		#if velocity.y > 0:
+			#rotation = PI
+		#else:
+			#rotation = 0
+		#$AnimatedSprite2D.animation = &"up"
+		#$AnimatedSprite2D.flip_v = velocity.y > 0
+		
+
+
+func start(pos):
+	position = pos
+	rotation = 0
+	show()
+	$CollisionPolygon2D.disabled = false
+#
+
+func _on_nave_body_entered(_body):
+	hit.emit()
+	$CollisionPolygon2D.set_deferred(&"disabled", true)

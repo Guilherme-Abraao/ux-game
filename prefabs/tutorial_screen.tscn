@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://yk2yyuyju0u0"]
+[gd_scene load_steps=17 format=3 uid="uid://yk2yyuyju0u0"]
 
 [ext_resource type="Shader" path="res://shaders/move_bg.gdshader" id="1_014oj"]
 [ext_resource type="Script" path="res://scripts/tutorial_screen.gd" id="1_fgt3j"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://brjaumcj88rfy" path="res://assets/Background/fog_background.png" id="4_pkciv"]
 [ext_resource type="Texture2D" uid="uid://w1tv68riaejb" path="res://assets/nome_game.png" id="5_olray"]
 [ext_resource type="Theme" uid="uid://b6u42r1xi417o" path="res://theme/btn_title_screen.tres" id="6_7y1ty"]
+[ext_resource type="AudioStream" uid="uid://b0c4wklfgfk5l" path="res://assets/audio/menu_music.wav" id="8_e62a3"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ksubb"]
 shader = ExtResource("1_014oj")
@@ -269,5 +270,8 @@ libraries = {
 "": SubResource("AnimationLibrary_gy7h7")
 }
 autoplay = "fade_in"
+
+[node name="Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_e62a3")
 
 [connection signal="pressed" from="VBoxContainer/quit_btn" to="." method="_on_quit_btn_pressed"]

@@ -1,6 +1,6 @@
-[gd_scene load_steps=13 format=3 uid="uid://d0enbrbhe3yq3"]
+[gd_scene load_steps=14 format=3 uid="uid://d0enbrbhe3yq3"]
 
-[ext_resource type="Script" path="res://scripts/title_screen.gd" id="1_ul47s"]
+[ext_resource type="Script" path="res://scripts/title_screen.gd" id="1_h47ec"]
 [ext_resource type="Theme" uid="uid://b6u42r1xi417o" path="res://theme/btn_title_screen.tres" id="3_i3gtv"]
 [ext_resource type="Shader" path="res://shaders/move_bg.gdshader" id="3_jtpco"]
 [ext_resource type="Texture2D" uid="uid://w1tv68riaejb" path="res://assets/nome_game.png" id="3_kqtlw"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bnyebacix6hj2" path="res://assets/nave.png" id="4_dpgx5"]
 [ext_resource type="Shader" path="res://shaders/fog.gdshader" id="5_h8uvr"]
 [ext_resource type="Texture2D" uid="uid://brjaumcj88rfy" path="res://assets/Background/fog_background.png" id="6_78gnf"]
+[ext_resource type="AudioStream" uid="uid://b0c4wklfgfk5l" path="res://assets/audio/menu_music.wav" id="9_2btl6"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0gwum"]
 shader = ExtResource("3_jtpco")
@@ -26,7 +27,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_ul47s")
+script = ExtResource("1_h47ec")
 
 [node name="background" type="TextureRect" parent="."]
 texture_repeat = 2
@@ -124,6 +125,9 @@ layout_mode = 2
 texture = ExtResource("4_dpgx5")
 expand_mode = 3
 flip_h = true
+
+[node name="Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_2btl6")
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/start_btn" to="." method="_on_start_btn_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/credits_btn" to="." method="_on_credits_btn_pressed"]

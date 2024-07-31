@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://2s7xo26fmg4s"]
+
+[ext_resource type="Script" path="res://scripts/nave.gd" id="1_g8od8"]
+[ext_resource type="Texture2D" uid="uid://bnyebacix6hj2" path="res://assets/nave.png" id="1_hjqq0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tw84v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_hjqq0")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_hjqq0")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}]
+
+[node name="nave" type="Area2D"]
+script = ExtResource("1_g8od8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2, -4)
+scale = Vector2(0.15, 0.15)
+sprite_frames = SubResource("SpriteFrames_tw84v")
+animation = &"up"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, -2.5)
+scale = Vector2(1, 1.25)
+polygon = PackedVector2Array(-2, -23.6, 7, -11.6, 24, 2.8, 25, 11.6, 8, 6, 8, 9.2, 13, 14.8, 14, 20.4, 7, 21.2, 5, 16.4, -9, 16.4, -11, 22.8, -19, 22.8, -18, 17.2, -12, 10, -11, 5.2, -18, 7.6, -29, 11.6, -30, 3.6, -13, -10.8, -8, -18.8)
+
+[node name="DeathSound" type="AudioStreamPlayer" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_nave_body_entered"]

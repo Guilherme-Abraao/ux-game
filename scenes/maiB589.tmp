@@ -1,0 +1,70 @@
+[gd_scene load_steps=10 format=3 uid="uid://cijmljjyey3t7"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_t6og4"]
+[ext_resource type="PackedScene" uid="uid://2s7xo26fmg4s" path="res://scenes/nave.tscn" id="1_wdey3"]
+[ext_resource type="Texture2D" uid="uid://brjaumcj88rfy" path="res://assets/Background/fog_background.png" id="2_1c63j"]
+[ext_resource type="PackedScene" uid="uid://v7uk6vmlfltb" path="res://scenes/asteroide.tscn" id="2_nbaal"]
+[ext_resource type="Texture2D" uid="uid://bf8s6nq5e7mp4" path="res://assets/Background/background-game.jpg" id="3_5ge5x"]
+[ext_resource type="AudioStream" uid="uid://br7m5rsyu8uet" path="res://assets/audio/gameover.wav" id="3_8l01c"]
+[ext_resource type="AudioStream" uid="uid://bvlnoiq0swllv" path="res://assets/audio/game_music.wav" id="4_mvorb"]
+[ext_resource type="PackedScene" uid="uid://bsmi8fae8q4k2" path="res://scenes/hud.tscn" id="5_h0c0i"]
+
+[sub_resource type="Curve2D" id="Curve2D_043ua"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -203.376, -204.214, 0, 0, 0, 0, 999.765, -199.719, 0, 0, 0, 0, 1001.26, 471.27, 0, 0, 0, 0, -201.878, 469.772, 0, 0, 0, 0, -203.376, -204.214)
+}
+point_count = 5
+
+[node name="Main" type="Node"]
+script = ExtResource("1_t6og4")
+asteroide_scene = ExtResource("2_nbaal")
+
+[node name="fog" type="TextureRect" parent="."]
+offset_left = -718.281
+offset_top = -727.795
+offset_right = 2281.72
+offset_bottom = 1639.21
+texture = ExtResource("2_1c63j")
+
+[node name="fog2" type="TextureRect" parent="."]
+offset_left = -718.281
+offset_top = -727.795
+offset_right = 2281.72
+offset_bottom = 1639.21
+texture = ExtResource("3_5ge5x")
+
+[node name="nave" parent="." instance=ExtResource("1_wdey3")]
+position = Vector2(342, 147)
+
+[node name="AsteroideTimer" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="ScoreTimer" type="Timer" parent="."]
+
+[node name="StartTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="StartPosition" type="Marker2D" parent="."]
+position = Vector2(600, 500)
+
+[node name="AsteroidePath" type="Path2D" parent="."]
+position = Vector2(200, 200)
+curve = SubResource("Curve2D_043ua")
+
+[node name="AsteoirdeSpawnLocation" type="PathFollow2D" parent="AsteroidePath"]
+position = Vector2(-203.376, -204.214)
+rotation = 0.00373605
+
+[node name="DeathSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_8l01c")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_mvorb")
+
+[node name="HUD" parent="." instance=ExtResource("5_h0c0i")]
+
+[connection signal="hit" from="nave" to="." method="game_over"]
+[connection signal="timeout" from="AsteroideTimer" to="." method="_on_asteroide_timer_timeout"]
+[connection signal="timeout" from="ScoreTimer" to="." method="_on_score_timer_timeout"]
+[connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]

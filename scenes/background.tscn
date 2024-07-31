@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://4vejd8j167qj"]
+
+[ext_resource type="Shader" path="res://shaders/move_bg.gdshader" id="1_cvbah"]
+[ext_resource type="Texture2D" uid="uid://bf8s6nq5e7mp4" path="res://assets/Background/background-game.jpg" id="2_0bgm1"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8jlme"]
+shader = ExtResource("1_cvbah")
+
+[node name="background" type="TextureRect"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_8jlme")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -680.0
+offset_top = -462.5
+offset_right = 680.0
+offset_bottom = 462.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_0bgm1")

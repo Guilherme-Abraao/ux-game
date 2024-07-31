@@ -10,9 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Space Room"
-run/main_scene="res://prefabs/title_screen.tscn"
-config/features=PackedStringArray("4.2", "GL Compatibility")
+config/name="Limpo"
+config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
@@ -23,9 +22,3 @@ Globals="*res://singletons/globals.gd"
 
 window/size/viewport_width=1200
 window/size/viewport_height=675
-
-[rendering]
-
-textures/canvas_textures/default_texture_filter=0
-renderer/rendering_method="gl_compatibility"
-renderer/rendering_method.mobile="gl_compatibility"

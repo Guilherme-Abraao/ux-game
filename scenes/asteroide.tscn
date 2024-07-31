@@ -1,19 +1,73 @@
-[gd_scene load_steps=4 format=3 uid="uid://0ht4tcyliqk8"]
+[gd_scene load_steps=9 format=3 uid="uid://v7uk6vmlfltb"]
 
-[ext_resource type="Texture2D" uid="uid://drdaqyern6ghn" path="res://assets/Lava 1.png" id="1_kmfwh"]
-[ext_resource type="Script" path="res://scripts/asteroide.gd" id="1_wqges"]
+[ext_resource type="Texture2D" uid="uid://drdaqyern6ghn" path="res://assets/Lava 1.png" id="1_1grhd"]
+[ext_resource type="Script" path="res://scripts/asteroide.gd" id="1_gjlb6"]
+[ext_resource type="Texture2D" uid="uid://b5tauj4ev4q1c" path="res://assets/asteroides/azul_claro.png" id="2_oklne"]
+[ext_resource type="Texture2D" uid="uid://dho0mt1evkjks" path="res://assets/asteroides/azul_escuro.png" id="4_d737w"]
+[ext_resource type="Texture2D" uid="uid://3aypnxm6jjbi" path="res://assets/asteroides/roxa.png" id="5_pkyu6"]
+[ext_resource type="Texture2D" uid="uid://cp3v62nmgn7g4" path="res://assets/asteroides/vermelho.png" id="6_ekw1k"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_crvus"]
-radius = 73.6842
+[sub_resource type="SpriteFrames" id="SpriteFrames_alet2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_oklne")
+}],
+"loop": true,
+"name": &"azul_claro",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_d737w")
+}],
+"loop": true,
+"name": &"azul_escuro",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_1grhd")
+}],
+"loop": true,
+"name": &"lava",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_pkyu6")
+}],
+"loop": true,
+"name": &"roxa",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_ekw1k")
+}],
+"loop": true,
+"name": &"vermelho",
+"speed": 5.0
+}]
 
-[node name="Asteroide" type="Area2D"]
-position = Vector2(286, 186)
-script = ExtResource("1_wqges")
+[sub_resource type="CircleShape2D" id="CircleShape2D_ljim5"]
+radius = 76.6667
+
+[node name="asteroide" type="RigidBody2D"]
+collision_mask = 0
+gravity_scale = 0.0
+script = ExtResource("1_gjlb6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, 0)
+scale = Vector2(0.298282, 0.298282)
+sprite_frames = SubResource("SpriteFrames_alet2")
+animation = &"azul_claro"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(0.38, 0.38)
-shape = SubResource("CircleShape2D_crvus")
+scale = Vector2(0.3, 0.3)
+shape = SubResource("CircleShape2D_ljim5")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.38, 0.38)
-texture = ExtResource("1_kmfwh")
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
