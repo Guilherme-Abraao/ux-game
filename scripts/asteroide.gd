@@ -1,7 +1,7 @@
 extends RigidBody2D
 
 @export var MIN_SPEED:int = 150
-@export var MAX_SPEED:int = 250
+@export var MAX_SPEED:int = 650
 
 func _ready():
 	$AnimatedSprite2D.play()
