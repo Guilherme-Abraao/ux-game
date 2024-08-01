@@ -2,6 +2,14 @@
   <img src="https://github.com/user-attachments/assets/6c8fd498-ea1b-4de9-8690-098d2db6ebb0" alt="game_name" width="500" />
 </p>
 
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/78adaede-a763-46e6-a886-696f38d2dce3" alt="game_demo" style="width: 400px; height: auto;" />
+</p>
+
+
+
+
 # 💻 Projeto - Space Room
 
 ### Missão
