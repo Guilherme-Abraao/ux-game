@@ -45,7 +45,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias (link para os respect
 
 | Nome              | Função     |
 |-------------------|------------|
-| Guilherme Abraão  | Gerente do projeto e Backend Game Developer |
+| Guilherme Abraão  | Gerente do projeto, UI/UX Designer e Backend Game Developer |
 | Gabriel Milhomem  | Documentação |
 | João Victor       | Game Asset Artist e UI/UX Designer |
 | Mario Cesar       | Backend Game Developer e Game Asset Artist |
